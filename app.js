@@ -19,6 +19,7 @@ let answered = false;
 // ========================================
 
 function showSection(sectionId) {
+
     const sections = [
         "user-selection",
         "language-selection",
@@ -58,16 +59,6 @@ function selectLanguage(language) {
 
     loadLists();
 }
-// ========================================
-// VÄLJ RIKTNING
-// ========================================
-
-function selectDirection(direction) {
-
-    selectedDirection = direction;
-
-    startQuiz(selectedFile, selectedList);
-}
 
 
 // ========================================
@@ -76,14 +67,14 @@ function selectDirection(direction) {
 
 async function loadLists() {
 
-    const listButtons = document.getElementById("list-buttons");
+    const listButtons =
+        document.getElementById("list-buttons");
 
     listButtons.innerHTML = "";
 
     const basePath =
         `glosor/${selectedUser}/${selectedLanguage}/`;
 
-    // Våra listor
     const lists = [
         {
             file: "verb.json",
@@ -97,11 +88,13 @@ async function loadLists() {
 
     lists.forEach(list => {
 
-        const button = document.createElement("button");
+        const button =
+            document.createElement("button");
 
         button.textContent = list.name;
 
         button.onclick = () => {
+
             selectedList = list.name;
             selectedFile = list.file;
 
@@ -112,6 +105,18 @@ async function loadLists() {
     });
 
     showSection("list-selection");
+}
+
+
+// ========================================
+// VÄLJ RIKTNING
+// ========================================
+
+function selectDirection(direction) {
+
+    selectedDirection = direction;
+
+    startQuiz(selectedFile, selectedList);
 }
 
 
@@ -131,17 +136,22 @@ async function startQuiz(file, listName) {
         const response = await fetch(path);
 
         if (!response.ok) {
-            throw new Error("Kunde inte läsa gloslistan.");
+            throw new Error(
+                "Kunde inte läsa gloslistan."
+            );
         }
 
         words = await response.json();
 
         if (words.length === 0) {
-            alert("Den här gloslistan är tom.");
+
+            alert(
+                "Den här gloslistan är tom."
+            );
+
             return;
         }
 
-        // Blanda glosorna
         words = shuffleArray(words);
 
         currentWordIndex = 0;
@@ -189,27 +199,35 @@ function showCurrentWord() {
         document.getElementById("quiz-progress");
 
 
-    // Visa aktuell glosa beroende på riktning
+    // ------------------------------------
+    // VISA ORD BEROENDE PÅ RIKTNING
+    // ------------------------------------
 
-    if (selectedDirection === "foreign-to-swedish") {
+    if (
+        selectedDirection ===
+        "foreign-to-swedish"
+    ) {
 
-    wordElement.textContent =
-        words[currentWordIndex].foreign;
+        wordElement.textContent =
+            words[currentWordIndex].foreign;
 
-    answerInput.placeholder =
-        "Skriv den svenska översättningen";
+        answerInput.placeholder =
+            "Skriv den svenska översättningen";
 
     } else {
 
-    wordElement.textContent =
-        words[currentWordIndex].swedish;
+        wordElement.textContent =
+            words[currentWordIndex].swedish;
 
-    answerInput.placeholder =
-        "Skriv översättningen";
+        answerInput.placeholder =
+            "Skriv översättningen";
     }
 
 
+    // ------------------------------------
     // Rensa tidigare svar
+    // ------------------------------------
+
     answerInput.value = "";
 
     feedback.textContent = "";
@@ -221,11 +239,18 @@ function showCurrentWord() {
     answerInput.disabled = false;
 
 
+    // ------------------------------------
     // Visa framsteg
+    // ------------------------------------
+
     progress.textContent =
         `Glosa ${currentWordIndex + 1} av ${words.length}`;
 
+
+    // ------------------------------------
     // Placera markören i textrutan
+    // ------------------------------------
+
     answerInput.focus();
 }
 
@@ -254,24 +279,9 @@ function checkAnswer() {
 
 
     const userAnswer =
-        answerInput.value.trim().toLowerCase();
-
-    let correctAnswer;
-
-    if (selectedDirection === "foreign-to-swedish") {
-
-    correctAnswer =
-        words[currentWordIndex].swedish
+        answerInput.value
             .trim()
             .toLowerCase();
-
-    } else {
-
-    correctAnswer =
-        words[currentWordIndex].foreign
-            .trim()
-            .toLowerCase();
-    }
 
 
     if (userAnswer === "") {
@@ -283,6 +293,37 @@ function checkAnswer() {
     }
 
 
+    // ------------------------------------
+    // Hämta rätt svar
+    // ------------------------------------
+
+    let correctAnswer;
+
+    if (
+        selectedDirection ===
+        "foreign-to-swedish"
+    ) {
+
+        correctAnswer =
+            words[currentWordIndex]
+                .swedish
+                .trim()
+                .toLowerCase();
+
+    } else {
+
+        correctAnswer =
+            words[currentWordIndex]
+                .foreign
+                .trim()
+                .toLowerCase();
+    }
+
+
+    // ------------------------------------
+    // Lås frågan
+    // ------------------------------------
+
     answered = true;
 
     answerInput.disabled = true;
@@ -291,6 +332,10 @@ function checkAnswer() {
 
     nextButton.classList.remove("hidden");
 
+
+    // ------------------------------------
+    // Kontrollera svaret
+    // ------------------------------------
 
     if (userAnswer === correctAnswer) {
 
@@ -302,13 +347,13 @@ function checkAnswer() {
     } else {
 
         const correctAnswerDisplay =
-            selectedDirection === "foreign-to-swedish"
+            selectedDirection ===
+            "foreign-to-swedish"
                 ? words[currentWordIndex].swedish
                 : words[currentWordIndex].foreign;
 
         feedback.textContent =
             `✗ Fel. Rätt svar är: ${correctAnswerDisplay}`;
-
     }
 }
 
@@ -321,7 +366,10 @@ function nextWord() {
 
     currentWordIndex++;
 
-    if (currentWordIndex >= words.length) {
+    if (
+        currentWordIndex >=
+        words.length
+    ) {
 
         showResult();
 
@@ -344,7 +392,9 @@ function showResult() {
         document.getElementById("result-text");
 
     const percentage =
-        Math.round((score / words.length) * 100);
+        Math.round(
+            (score / words.length) * 100
+        );
 
     resultText.textContent =
         `Du fick ${score} av ${words.length} rätt (${percentage} %).`;
@@ -378,6 +428,8 @@ function restartFromBeginning() {
     selectedUser = "";
     selectedLanguage = "";
     selectedList = "";
+    selectedFile = "";
+    selectedDirection = "";
 
     words = [];
 
@@ -397,6 +449,9 @@ function goBackToUsers() {
 
     selectedUser = "";
     selectedLanguage = "";
+    selectedList = "";
+    selectedFile = "";
+    selectedDirection = "";
 
     showSection("user-selection");
 }
@@ -409,9 +464,13 @@ function goBackToUsers() {
 function goBackToLanguages() {
 
     selectedLanguage = "";
+    selectedList = "";
+    selectedFile = "";
+    selectedDirection = "";
 
     showSection("language-selection");
 }
+
 
 // ========================================
 // TILLBAKA TILL GLOSLISTOR
@@ -419,6 +478,8 @@ function goBackToLanguages() {
 
 function goBackToLists() {
 
+    selectedList = "";
+    selectedFile = "";
     selectedDirection = "";
 
     showSection("list-selection");
@@ -440,10 +501,17 @@ function shuffleArray(array) {
     ) {
 
         const j =
-            Math.floor(Math.random() * (i + 1));
+            Math.floor(
+                Math.random() * (i + 1)
+            );
 
-        [shuffled[i], shuffled[j]] =
-            [shuffled[j], shuffled[i]];
+        [
+            shuffled[i],
+            shuffled[j]
+        ] = [
+            shuffled[j],
+            shuffled[i]
+        ];
     }
 
     return shuffled;
@@ -456,19 +524,20 @@ function shuffleArray(array) {
 
 document
     .getElementById("answer")
-    .addEventListener("keydown", function(event) {
+    .addEventListener(
+        "keydown",
+        function(event) {
 
-        if (event.key === "Enter") {
+            if (event.key === "Enter") {
 
-            if (answered) {
+                if (answered) {
 
-                nextWord();
+                    nextWord();
 
-            } else {
+                } else {
 
-                checkAnswer();
-
+                    checkAnswer();
+                }
             }
         }
-
-    });
+    );
