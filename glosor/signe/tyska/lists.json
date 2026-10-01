@@ -6,8 +6,5 @@
     {
         "file": "nyhetsord.json",
         "name": "Nyhetsord"
-    },
-    {   "file": "resor.json",
-        "name": "Resor"
     }
 ]
