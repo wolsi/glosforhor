@@ -1,0 +1,10 @@
+[
+    {
+        "file": "verb.json",
+        "name": "Verb"
+    },
+    {
+        "file": "nyhetsord.json",
+        "name": "Nyhetsord"
+    }
+]
