@@ -355,8 +355,6 @@ function checkAnswer() {
 
     answered = true;
 
-    answerInput.disabled = true;
-
     submitButton.classList.add("hidden");
 
     nextButton.classList.remove("hidden");
@@ -557,16 +555,20 @@ document
         "keydown",
         function(event) {
 
-            if (event.key === "Enter") {
+            if (event.key !== "Enter") {
+                return;
+            }
 
-                if (answered) {
+            event.preventDefault();
 
-                    nextWord();
 
-                } else {
+            if (answered) {
 
-                    checkAnswer();
-                }
+                nextWord();
+
+            } else {
+
+                checkAnswer();
             }
         }
     );
