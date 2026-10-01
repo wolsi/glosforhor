@@ -7,7 +7,7 @@
         "file": "nyhetsord.json",
         "name": "Nyhetsord"
     },
-    {   "file": forberedandekurs1.json
+    {   "file": kurs.json
         "name": "Förberedande kurs 1"
     }
 ]
