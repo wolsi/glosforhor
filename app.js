@@ -72,39 +72,68 @@ async function loadLists() {
 
     listButtons.innerHTML = "";
 
-    const basePath =
-        `glosor/${selectedUser}/${selectedLanguage}/`;
+    const path =
+        `glosor/${selectedUser}/${selectedLanguage}/lists.json`;
 
-    const lists = [
-        {
-            file: "verb.json",
-            name: "Verb"
-        },
-        {
-            file: "nyhetsord.json",
-            name: "Nyhetsord"
+    try {
+
+        const response = await fetch(path);
+
+        if (!response.ok) {
+            throw new Error(
+                "Kunde inte läsa listorna."
+            );
         }
-    ];
 
-    lists.forEach(list => {
+        const lists = await response.json();
 
-        const button =
-            document.createElement("button");
 
-        button.textContent = list.name;
+        if (lists.length === 0) {
 
-        button.onclick = () => {
+            listButtons.innerHTML =
+                "<p>Det finns inga gloslistor ännu.</p>";
 
-            selectedList = list.name;
-            selectedFile = list.file;
+            showSection("list-selection");
 
-            showSection("direction-selection");
-        };
+            return;
+        }
 
-        listButtons.appendChild(button);
-    });
 
-    showSection("list-selection");
+        lists.forEach(list => {
+
+            const button =
+                document.createElement("button");
+
+            button.textContent =
+                list.name;
+
+            button.onclick = () => {
+
+                selectedList =
+                    list.name;
+
+                selectedFile =
+                    list.file;
+
+                showSection(
+                    "direction-selection"
+                );
+            };
+
+            listButtons.appendChild(button);
+        });
+
+
+        showSection("list-selection");
+
+    } catch (error) {
+
+        console.error(error);
+
+        alert(
+            "Något gick fel när gloslistorna skulle laddas."
+        );
+    }
 }
 
 
