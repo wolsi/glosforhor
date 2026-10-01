@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glosförhör</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>Glosförhör</h1>
+
+        <section id="user-selection">
+            <h2>Vem ska träna?</h2>
+
+            <div class="button-group">
+                <button onclick="selectUser('signe')">Signe</button>
+                <button onclick="selectUser('sofia')">Sofia</button>
+            </div>
+        </section>
+
+        <section id="language-selection" class="hidden">
+            <h2>Välj språk</h2>
+
+            <div class="button-group">
+                <button onclick="selectLanguage('tyska')">
+                    🇩🇪 Tyska
+                </button>
+
+                <button onclick="selectLanguage('franska')">
+                    🇫🇷 Franska
+                </button>
+            </div>
+
+            <button class="back-button" onclick="goBackToUsers()">
+                ← Tillbaka
+            </button>
+        </section>
+
+        <section id="list-selection" class="hidden">
+            <h2>Välj gloslista</h2>
+
+            <div id="list-buttons" class="button-group"></div>
+
+            <button class="back-button" onclick="goBackToLanguages()">
+                ← Tillbaka
+            </button>
+        </section>
+
+        <section id="quiz" class="hidden">
+
+            <div id="quiz-progress"></div>
+
+            <h2 id="word"></h2>
+
+            <input
+                type="text"
+                id="answer"
+                placeholder="Skriv den svenska översättningen"
+                autocomplete="off"
+            >
+
+            <button id="submit-answer" onclick="checkAnswer()">
+                Svara
+            </button>
+
+            <div id="feedback"></div>
+
+            <button
+                id="next-word"
+                class="hidden"
+                onclick="nextWord()"
+            >
+                Nästa
+            </button>
+
+        </section>
+
+        <section id="result" class="hidden">
+
+            <h2>Förhöret är klart!</h2>
+
+            <p id="result-text"></p>
+
+            <button onclick="restartQuiz()">
+                Gör om förhöret
+            </button>
+
+            <button class="back-button" onclick="restartFromBeginning()">
+                Välj annan gloslista
+            </button>
+
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
