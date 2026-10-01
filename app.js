@@ -5,6 +5,8 @@
 let selectedUser = "";
 let selectedLanguage = "";
 let selectedList = "";
+let selectedFile = "";
+let selectedDirection = "";
 
 let words = [];
 let currentWordIndex = 0;
@@ -21,6 +23,7 @@ function showSection(sectionId) {
         "user-selection",
         "language-selection",
         "list-selection",
+        "direction-selection",
         "quiz",
         "result"
     ];
@@ -54,6 +57,16 @@ function selectLanguage(language) {
     selectedLanguage = language;
 
     loadLists();
+}
+// ========================================
+// VÄLJ RIKTNING
+// ========================================
+
+function selectDirection(direction) {
+
+    selectedDirection = direction;
+
+    startQuiz(selectedFile, selectedList);
 }
 
 
@@ -89,7 +102,10 @@ async function loadLists() {
         button.textContent = list.name;
 
         button.onclick = () => {
-            startQuiz(list.file, list.name);
+            selectedList = list.name;
+            selectedFile = list.file;
+
+            showSection("direction-selection");
         };
 
         listButtons.appendChild(button);
@@ -173,9 +189,24 @@ function showCurrentWord() {
         document.getElementById("quiz-progress");
 
 
-    // Visa glosan
+    // Visa aktuell glosa beroende på riktning
+
+    if (selectedDirection === "foreign-to-swedish") {
+
     wordElement.textContent =
         words[currentWordIndex].foreign;
+
+    answerInput.placeholder =
+        "Skriv den svenska översättningen";
+
+    } else {
+
+    wordElement.textContent =
+        words[currentWordIndex].swedish;
+
+    answerInput.placeholder =
+        "Skriv översättningen";
+    }
 
 
     // Rensa tidigare svar
@@ -225,10 +256,22 @@ function checkAnswer() {
     const userAnswer =
         answerInput.value.trim().toLowerCase();
 
-    const correctAnswer =
+    let correctAnswer;
+
+    if (selectedDirection === "foreign-to-swedish") {
+
+    correctAnswer =
         words[currentWordIndex].swedish
             .trim()
             .toLowerCase();
+
+    } else {
+
+    correctAnswer =
+        words[currentWordIndex].foreign
+            .trim()
+            .toLowerCase();
+    }
 
 
     if (userAnswer === "") {
@@ -258,8 +301,13 @@ function checkAnswer() {
 
     } else {
 
+        const correctAnswerDisplay =
+            selectedDirection === "foreign-to-swedish"
+                ? words[currentWordIndex].swedish
+                : words[currentWordIndex].foreign;
+
         feedback.textContent =
-            `✗ Fel. Rätt svar är: ${words[currentWordIndex].swedish}`;
+            `✗ Fel. Rätt svar är: ${correctAnswerDisplay}`;
 
     }
 }
@@ -363,6 +411,17 @@ function goBackToLanguages() {
     selectedLanguage = "";
 
     showSection("language-selection");
+}
+
+// ========================================
+// TILLBAKA TILL GLOSLISTOR
+// ========================================
+
+function goBackToLists() {
+
+    selectedDirection = "";
+
+    showSection("list-selection");
 }
 
 
