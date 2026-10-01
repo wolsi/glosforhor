@@ -1,0 +1,22 @@
+[
+    {
+        "foreign": "parler",
+        "swedish": "tala"
+    },
+    {
+        "foreign": "lire",
+        "swedish": "läsa"
+    },
+    {
+        "foreign": "écrire",
+        "swedish": "skriva"
+    },
+    {
+        "foreign": "manger",
+        "swedish": "äta"
+    },
+    {
+        "foreign": "boire",
+        "swedish": "dricka"
+    }
+]
