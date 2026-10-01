@@ -50,6 +50,30 @@
             </button>
         </section>
 
+        <section id="direction-selection" class="hidden">
+
+        <h2>Hur vill du träna?</h2>
+    
+        <div class="button-group">
+    
+            <button onclick="selectDirection('foreign-to-swedish')">
+                🌍 → 🇸🇪<br>
+                <small>Översätt till svenska</small>
+            </button>
+    
+            <button onclick="selectDirection('swedish-to-foreign')">
+                🇸🇪 → 🌍<br>
+                <small>Översätt till språket</small>
+            </button>
+    
+        </div>
+    
+        <button class="back-button" onclick="goBackToLists()">
+            ← Tillbaka
+        </button>
+    
+        </section>
+
         <section id="quiz" class="hidden">
 
             <div id="quiz-progress"></div>
