@@ -1,22 +1,481 @@
 [
-    {
-        "foreign": "sein",
-        "swedish": "vara"
-    },
-    {
-        "foreign": "haben",
-        "swedish": "ha"
-    },
-    {
-        "foreign": "werden",
-        "swedish": "bli"
-    },
-    {
-        "foreign": "gehen",
-        "swedish": "gå"
-    },
-    {
-        "foreign": "kommen",
-        "swedish": "komma"
-    }
+    {"foreign": "lernen", "swedish": "lära sig"},
+    {"foreign": "ich lerne", "swedish": "jag lär mig"},
+    {"foreign": "du lernst", "swedish": "du lär dig"},
+    {"foreign": "er lernt", "swedish": "han lär sig"},
+
+    {"foreign": "zählen", "swedish": "räkna"},
+    {"foreign": "ich zähle", "swedish": "jag räknar"},
+    {"foreign": "du zählst", "swedish": "du räknar"},
+    {"foreign": "er zählt", "swedish": "han räknar"},
+
+    {"foreign": "ergänzen", "swedish": "komplettera"},
+    {"foreign": "ich ergänze", "swedish": "jag kompletterar"},
+    {"foreign": "du ergänzt", "swedish": "du kompletterar"},
+    {"foreign": "er ergänzt", "swedish": "han kompletterar"},
+
+    {"foreign": "mögen", "swedish": "tycka om"},
+    {"foreign": "ich mag", "swedish": "jag tycker om"},
+    {"foreign": "du magst", "swedish": "du tycker om"},
+    {"foreign": "er mag", "swedish": "han tycker om"},
+
+    {"foreign": "schreiben", "swedish": "skriva"},
+    {"foreign": "ich schreibe", "swedish": "jag skriver"},
+    {"foreign": "du schreibst", "swedish": "du skriver"},
+    {"foreign": "er schreibt", "swedish": "han skriver"},
+
+    {"foreign": "bleiben", "swedish": "stanna"},
+    {"foreign": "ich bleibe", "swedish": "jag stannar"},
+    {"foreign": "du bleibst", "swedish": "du stannar"},
+    {"foreign": "er bleibt", "swedish": "han stannar"},
+
+    {"foreign": "denken", "swedish": "tänka"},
+    {"foreign": "ich denke", "swedish": "jag tänker"},
+    {"foreign": "du denkst", "swedish": "du tänker"},
+    {"foreign": "er denkt", "swedish": "han tänker"},
+
+    {"foreign": "lieben", "swedish": "älska"},
+    {"foreign": "ich liebe", "swedish": "jag älskar"},
+    {"foreign": "du liebst", "swedish": "du älskar"},
+    {"foreign": "er liebt", "swedish": "han älskar"},
+
+    {"foreign": "sagen", "swedish": "säga"},
+    {"foreign": "ich sage", "swedish": "jag säger"},
+    {"foreign": "du sagst", "swedish": "du säger"},
+    {"foreign": "er sagt", "swedish": "han säger"},
+
+    {"foreign": "spielen", "swedish": "spela"},
+    {"foreign": "ich spiele", "swedish": "jag spelar"},
+    {"foreign": "du spielst", "swedish": "du spelar"},
+    {"foreign": "er spielt", "swedish": "han spelar"},
+
+    {"foreign": "geben", "swedish": "ge"},
+    {"foreign": "ich gebe", "swedish": "jag ger"},
+    {"foreign": "du gibst", "swedish": "du ger"},
+    {"foreign": "er gibt", "swedish": "han ger"},
+
+    {"foreign": "kommen", "swedish": "komma"},
+    {"foreign": "ich komme", "swedish": "jag kommer"},
+    {"foreign": "du kommst", "swedish": "du kommer"},
+    {"foreign": "er kommt", "swedish": "han kommer"},
+
+    {"foreign": "sein", "swedish": "vara"},
+    {"foreign": "ich bin", "swedish": "jag är"},
+    {"foreign": "du bist", "swedish": "du är"},
+    {"foreign": "er ist", "swedish": "han är"},
+
+    {"foreign": "lesen", "swedish": "läsa"},
+    {"foreign": "ich lese", "swedish": "jag läser"},
+    {"foreign": "du liest", "swedish": "du läser"},
+    {"foreign": "er liest", "swedish": "han läser"},
+
+    {"foreign": "sprechen", "swedish": "prata"},
+    {"foreign": "ich spreche", "swedish": "jag pratar"},
+    {"foreign": "du sprichst", "swedish": "du pratar"},
+    {"foreign": "er spricht", "swedish": "han pratar"},
+
+    {"foreign": "gehen", "swedish": "gå"},
+    {"foreign": "ich gehe", "swedish": "jag går"},
+    {"foreign": "du gehst", "swedish": "du går"},
+    {"foreign": "er geht", "swedish": "han går"},
+
+    {"foreign": "glauben", "swedish": "tro"},
+    {"foreign": "ich glaube", "swedish": "jag tror"},
+    {"foreign": "du glaubst", "swedish": "du tror"},
+    {"foreign": "er glaubt", "swedish": "han tror"},
+
+    {"foreign": "arbeiten", "swedish": "arbeta"},
+    {"foreign": "ich arbeite", "swedish": "jag arbetar"},
+    {"foreign": "du arbeitest", "swedish": "du arbetar"},
+    {"foreign": "er arbeitet", "swedish": "han arbetar"},
+
+    {"foreign": "machen", "swedish": "göra"},
+    {"foreign": "ich mache", "swedish": "jag gör"},
+    {"foreign": "du machst", "swedish": "du gör"},
+    {"foreign": "er macht", "swedish": "han gör"},
+
+    {"foreign": "haben", "swedish": "ha"},
+    {"foreign": "ich habe", "swedish": "jag har"},
+    {"foreign": "du hast", "swedish": "du har"},
+    {"foreign": "er hat", "swedish": "han har"},
+
+    {"foreign": "hören", "swedish": "höra"},
+    {"foreign": "ich höre", "swedish": "jag hör"},
+    {"foreign": "du hörst", "swedish": "du hör"},
+    {"foreign": "er hört", "swedish": "han hör"},
+
+    {"foreign": "suchen", "swedish": "leta efter"},
+    {"foreign": "ich suche", "swedish": "jag letar efter"},
+    {"foreign": "du suchst", "swedish": "du letar efter"},
+    {"foreign": "er sucht", "swedish": "han letar efter"},
+
+    {"foreign": "brauchen", "swedish": "behöva"},
+    {"foreign": "ich brauche", "swedish": "jag behöver"},
+    {"foreign": "du brauchst", "swedish": "du behöver"},
+    {"foreign": "er braucht", "swedish": "han behöver"},
+
+    {"foreign": "fragen", "swedish": "fråga"},
+    {"foreign": "ich frage", "swedish": "jag frågar"},
+    {"foreign": "du fragst", "swedish": "du frågar"},
+    {"foreign": "er fragt", "swedish": "han frågar"},
+
+    {"foreign": "möchten", "swedish": "vilja"},
+    {"foreign": "ich möchte", "swedish": "jag skulle vilja"},
+    {"foreign": "du möchtest", "swedish": "du skulle vilja"},
+    {"foreign": "er möchte", "swedish": "han skulle vilja"},
+
+    {"foreign": "können", "swedish": "kunna"},
+    {"foreign": "ich kann", "swedish": "jag kan"},
+    {"foreign": "du kannst", "swedish": "du kan"},
+    {"foreign": "er kann", "swedish": "han kan"},
+
+    {"foreign": "helfen", "swedish": "hjälpa"},
+    {"foreign": "ich helfe", "swedish": "jag hjälper"},
+    {"foreign": "du hilfst", "swedish": "du hjälper"},
+    {"foreign": "er hilft", "swedish": "han hjälper"},
+
+    {"foreign": "kaufen", "swedish": "köpa"},
+    {"foreign": "ich kaufe", "swedish": "jag köper"},
+    {"foreign": "du kaufst", "swedish": "du köper"},
+    {"foreign": "er kauft", "swedish": "han köper"},
+
+    {"foreign": "laufen", "swedish": "springa"},
+    {"foreign": "ich laufe", "swedish": "jag springer"},
+    {"foreign": "du läufst", "swedish": "du springer"},
+    {"foreign": "er läuft", "swedish": "han springer"},
+
+    {"foreign": "besuchen", "swedish": "besöka"},
+    {"foreign": "ich besuche", "swedish": "jag besöker"},
+    {"foreign": "du besuchst", "swedish": "du besöker"},
+    {"foreign": "er besucht", "swedish": "han besöker"},
+
+    {"foreign": "putzen", "swedish": "städa"},
+    {"foreign": "ich putze", "swedish": "jag städar"},
+    {"foreign": "du putzt", "swedish": "du städar"},
+    {"foreign": "er putzt", "swedish": "han städar"},
+
+    {"foreign": "schlafen", "swedish": "sova"},
+    {"foreign": "ich schlafe", "swedish": "jag sover"},
+    {"foreign": "du schläfst", "swedish": "du sover"},
+    {"foreign": "er schläft", "swedish": "han sover"},
+
+    {"foreign": "waschen", "swedish": "tvätta"},
+    {"foreign": "ich wasche", "swedish": "jag tvättar"},
+    {"foreign": "du wäschst", "swedish": "du tvättar"},
+    {"foreign": "er wäscht", "swedish": "han tvättar"},
+
+    {"foreign": "fahren", "swedish": "åka"},
+    {"foreign": "ich fahre", "swedish": "jag åker"},
+    {"foreign": "du fährst", "swedish": "du åker"},
+    {"foreign": "er fährt", "swedish": "han åker"},
+
+    {"foreign": "treffen", "swedish": "träffa"},
+    {"foreign": "ich treffe", "swedish": "jag träffar"},
+    {"foreign": "du triffst", "swedish": "du träffar"},
+    {"foreign": "er trifft", "swedish": "han träffar"},
+
+    {"foreign": "sehen", "swedish": "se"},
+    {"foreign": "ich sehe", "swedish": "jag ser"},
+    {"foreign": "du siehst", "swedish": "du ser"},
+    {"foreign": "er sieht", "swedish": "han ser"},
+
+    {"foreign": "chillen", "swedish": "chilla"},
+    {"foreign": "ich chille", "swedish": "jag chillar"},
+    {"foreign": "du chillst", "swedish": "du chillar"},
+    {"foreign": "er chillt", "swedish": "han chillar"},
+
+    {"foreign": "posten", "swedish": "posta"},
+    {"foreign": "ich poste", "swedish": "jag postar"},
+    {"foreign": "du postest", "swedish": "du postar"},
+    {"foreign": "er postet", "swedish": "han postar"},
+
+    {"foreign": "kochen", "swedish": "laga mat"},
+    {"foreign": "ich koche", "swedish": "jag lagar mat"},
+    {"foreign": "du kochst", "swedish": "du lagar mat"},
+    {"foreign": "er kocht", "swedish": "han lagar mat"},
+
+    {"foreign": "tanzen", "swedish": "dansa"},
+    {"foreign": "ich tanze", "swedish": "jag dansar"},
+    {"foreign": "du tanzt", "swedish": "du dansar"},
+    {"foreign": "er tanzt", "swedish": "han dansar"},
+
+    {"foreign": "aufräumen", "swedish": "städa undan"},
+    {"foreign": "ich räume auf", "swedish": "jag städar undan"},
+    {"foreign": "du räumst auf", "swedish": "du städar undan"},
+    {"foreign": "er räumt auf", "swedish": "han städar undan"},
+
+    {"foreign": "abwaschen", "swedish": "diska"},
+    {"foreign": "ich wasche ab", "swedish": "jag diskar"},
+    {"foreign": "du wäschst ab", "swedish": "du diskar"},
+    {"foreign": "er wäscht ab", "swedish": "han diskar"},
+
+    {"foreign": "einkaufen", "swedish": "handla"},
+    {"foreign": "ich kaufe ein", "swedish": "jag handlar"},
+    {"foreign": "du kaufst ein", "swedish": "du handlar"},
+    {"foreign": "er kauft ein", "swedish": "han handlar"},
+
+    {"foreign": "anfangen", "swedish": "börja"},
+    {"foreign": "ich fange an", "swedish": "jag börjar"},
+    {"foreign": "du fängst an", "swedish": "du börjar"},
+    {"foreign": "er fängt an", "swedish": "han börjar"},
+
+    {"foreign": "wegbringen", "swedish": "ta bort"},
+    {"foreign": "ich bringe weg", "swedish": "jag tar bort"},
+    {"foreign": "du bringst weg", "swedish": "du tar bort"},
+    {"foreign": "er bringt weg", "swedish": "han tar bort"},
+
+    {"foreign": "einladen", "swedish": "bjuda in"},
+    {"foreign": "ich lade ein", "swedish": "jag bjuder in"},
+    {"foreign": "du lädst ein", "swedish": "du bjuder in"},
+    {"foreign": "er lädt ein", "swedish": "han bjuder in"},
+
+    {"foreign": "schenken", "swedish": "ge bort"},
+    {"foreign": "ich schenke", "swedish": "jag ger bort"},
+    {"foreign": "du schenkst", "swedish": "du ger bort"},
+    {"foreign": "er schenkt", "swedish": "han ger bort"},
+
+    {"foreign": "bringen", "swedish": "ta med"},
+    {"foreign": "ich bringe", "swedish": "jag tar med"},
+    {"foreign": "du bringst", "swedish": "du tar med"},
+    {"foreign": "er bringt", "swedish": "han tar med"},
+
+    {"foreign": "studieren", "swedish": "studera"},
+    {"foreign": "ich studiere", "swedish": "jag studerar"},
+    {"foreign": "du studierst", "swedish": "du studerar"},
+    {"foreign": "er studiert", "swedish": "han studerar"},
+
+    {"foreign": "heiraten", "swedish": "gifta sig"},
+    {"foreign": "ich heirate", "swedish": "jag gifter mig"},
+    {"foreign": "du heiratest", "swedish": "du gifter dig"},
+    {"foreign": "er heiratet", "swedish": "han gifter sig"},
+
+    {"foreign": "essen", "swedish": "äta"},
+    {"foreign": "ich esse", "swedish": "jag äter"},
+    {"foreign": "du isst", "swedish": "du äter"},
+    {"foreign": "er isst", "swedish": "han äter"},
+
+    {"foreign": "mitkommen", "swedish": "följa med"},
+    {"foreign": "ich komme mit", "swedish": "jag följer med"},
+    {"foreign": "du kommst mit", "swedish": "du följer med"},
+    {"foreign": "er kommt mit", "swedish": "han följer med"},
+
+    {"foreign": "müssen", "swedish": "måste"},
+    {"foreign": "ich muss", "swedish": "jag måste"},
+    {"foreign": "du musst", "swedish": "du måste"},
+    {"foreign": "er muss", "swedish": "han måste"},
+
+    {"foreign": "wollen", "swedish": "vilja"},
+    {"foreign": "ich will", "swedish": "jag vill"},
+    {"foreign": "du willst", "swedish": "du vill"},
+    {"foreign": "er will", "swedish": "han vill"},
+
+    {"foreign": "frühstücken", "swedish": "äta frukost"},
+    {"foreign": "ich frühstücke", "swedish": "jag äter frukost"},
+    {"foreign": "du frühstückst", "swedish": "du äter frukost"},
+    {"foreign": "er frühstückt", "swedish": "han äter frukost"},
+
+    {"foreign": "dürfen", "swedish": "få"},
+    {"foreign": "ich darf", "swedish": "jag får"},
+    {"foreign": "du darfst", "swedish": "du får"},
+    {"foreign": "er darf", "swedish": "han får"},
+
+    {"foreign": "nehmen", "swedish": "ta"},
+    {"foreign": "ich nehme", "swedish": "jag tar"},
+    {"foreign": "du nimmst", "swedish": "du tar"},
+    {"foreign": "er nimmt", "swedish": "han tar"},
+
+    {"foreign": "zahlen", "swedish": "betala"},
+    {"foreign": "ich zahle", "swedish": "jag betalar"},
+    {"foreign": "du zahlst", "swedish": "du betalar"},
+    {"foreign": "er zahlt", "swedish": "han betalar"},
+
+    {"foreign": "finden", "swedish": "hitta"},
+    {"foreign": "ich finde", "swedish": "jag hittar"},
+    {"foreign": "du findest", "swedish": "du hittar"},
+    {"foreign": "er findet", "swedish": "han hittar"},
+
+    {"foreign": "trinken", "swedish": "dricka"},
+    {"foreign": "ich trinke", "swedish": "jag dricker"},
+    {"foreign": "du trinkst", "swedish": "du dricker"},
+    {"foreign": "er trinkt", "swedish": "han dricker"},
+
+    {"foreign": "kennen", "swedish": "känna till"},
+    {"foreign": "ich kenne", "swedish": "jag känner till"},
+    {"foreign": "du kennst", "swedish": "du känner till"},
+    {"foreign": "er kennt", "swedish": "han känner till"},
+
+    {"foreign": "wissen", "swedish": "veta"},
+    {"foreign": "ich weiß", "swedish": "jag vet"},
+    {"foreign": "du weißt", "swedish": "du vet"},
+    {"foreign": "er weiß", "swedish": "han vet"},
+
+    {"foreign": "tun", "swedish": "göra"},
+    {"foreign": "ich tue", "swedish": "jag gör"},
+    {"foreign": "du tust", "swedish": "du gör"},
+    {"foreign": "er tut", "swedish": "han gör"},
+
+    {"foreign": "bitten", "swedish": "be"},
+    {"foreign": "ich bitte", "swedish": "jag ber"},
+    {"foreign": "du bittest", "swedish": "du ber"},
+    {"foreign": "er bittet", "swedish": "han ber"},
+
+    {"foreign": "leben", "swedish": "leva"},
+    {"foreign": "ich lebe", "swedish": "jag lever"},
+    {"foreign": "du lebst", "swedish": "du lever"},
+    {"foreign": "er lebt", "swedish": "han lever"},
+
+    {"foreign": "aufstehen", "swedish": "gå upp"},
+    {"foreign": "ich stehe auf", "swedish": "jag går upp"},
+    {"foreign": "du stehst auf", "swedish": "du går upp"},
+    {"foreign": "er steht auf", "swedish": "han går upp"},
+
+    {"foreign": "einsteigen", "swedish": "stiga på"},
+    {"foreign": "ich steige ein", "swedish": "jag stiger på"},
+    {"foreign": "du steigst ein", "swedish": "du stiger på"},
+    {"foreign": "er steigt ein", "swedish": "han stiger på"},
+
+    {"foreign": "aussteigen", "swedish": "stiga av"},
+    {"foreign": "ich steige aus", "swedish": "jag stiger av"},
+    {"foreign": "du steigst aus", "swedish": "du stiger av"},
+    {"foreign": "er steigt aus", "swedish": "han stiger av"},
+
+    {"foreign": "umsteigen", "swedish": "byta färdmedel"},
+    {"foreign": "ich steige um", "swedish": "jag byter färdmedel"},
+    {"foreign": "du steigst um", "swedish": "du byter färdmedel"},
+    {"foreign": "er steigt um", "swedish": "han byter färdmedel"},
+
+    {"foreign": "stehen", "swedish": "stå"},
+    {"foreign": "ich stehe", "swedish": "jag står"},
+    {"foreign": "du stehst", "swedish": "du står"},
+    {"foreign": "er steht", "swedish": "han står"},
+
+    {"foreign": "fehlen", "swedish": "saknas"},
+    {"foreign": "ich fehle", "swedish": "jag saknas"},
+    {"foreign": "du fehlst", "swedish": "du saknas"},
+    {"foreign": "er fehlt", "swedish": "han saknas"},
+
+    {"foreign": "schicken", "swedish": "skicka"},
+    {"foreign": "ich schicke", "swedish": "jag skickar"},
+    {"foreign": "du schickst", "swedish": "du skickar"},
+    {"foreign": "er schickt", "swedish": "han skickar"},
+
+    {"foreign": "anmelden", "swedish": "anmäla"},
+    {"foreign": "ich melde an", "swedish": "jag anmäler"},
+    {"foreign": "du meldest an", "swedish": "du anmäler"},
+    {"foreign": "er meldet an", "swedish": "han anmäler"},
+
+    {"foreign": "kopieren", "swedish": "kopiera"},
+    {"foreign": "ich kopiere", "swedish": "jag kopierar"},
+    {"foreign": "du kopierst", "swedish": "du kopierar"},
+    {"foreign": "er kopiert", "swedish": "han kopierar"},
+
+    {"foreign": "recherchieren", "swedish": "undersöka"},
+    {"foreign": "ich recherchiere", "swedish": "jag undersöker"},
+    {"foreign": "du recherchierst", "swedish": "du undersöker"},
+    {"foreign": "er recherchiert", "swedish": "han undersöker"},
+
+    {"foreign": "analysieren", "swedish": "analysera"},
+    {"foreign": "ich analysiere", "swedish": "jag analyserar"},
+    {"foreign": "du analysierst", "swedish": "du analyserar"},
+    {"foreign": "er analysiert", "swedish": "han analyserar"},
+
+    {"foreign": "mitmachen", "swedish": "delta"},
+    {"foreign": "ich mache mit", "swedish": "jag deltar"},
+    {"foreign": "du machst mit", "swedish": "du deltar"},
+    {"foreign": "er macht mit", "swedish": "han deltar"},
+
+    {"foreign": "sortieren", "swedish": "sortera"},
+    {"foreign": "ich sortiere", "swedish": "jag sorterar"},
+    {"foreign": "du sortierst", "swedish": "du sorterar"},
+    {"foreign": "er sortiert", "swedish": "han sorterar"},
+
+    {"foreign": "kennenlernen", "swedish": "lära känna"},
+    {"foreign": "ich lerne kennen", "swedish": "jag lär känna"},
+    {"foreign": "du lernst kennen", "swedish": "du lär känna"},
+    {"foreign": "er lernt kennen", "swedish": "han lär känna"},
+
+    {"foreign": "verdienen", "swedish": "tjäna"},
+    {"foreign": "ich verdiene", "swedish": "jag tjänar"},
+    {"foreign": "du verdienst", "swedish": "du tjänar"},
+    {"foreign": "er verdient", "swedish": "han tjänar"},
+
+    {"foreign": "dauern", "swedish": "vara (om tid)"},
+    {"foreign": "ich dauere", "swedish": "jag varar"},
+    {"foreign": "du dauerst", "swedish": "du varar"},
+    {"foreign": "er dauert", "swedish": "han varar"},
+
+    {"foreign": "sammeln", "swedish": "samla"},
+    {"foreign": "ich sammle", "swedish": "jag samlar"},
+    {"foreign": "du sammelst", "swedish": "du samlar"},
+    {"foreign": "er sammelt", "swedish": "han samlar"},
+
+    {"foreign": "antworten", "swedish": "svara"},
+    {"foreign": "ich antworte", "swedish": "jag svarar"},
+    {"foreign": "du antwortest", "swedish": "du svarar"},
+    {"foreign": "er antwortet", "swedish": "han svarar"},
+
+    {"foreign": "anrufen", "swedish": "ringa"},
+    {"foreign": "ich rufe an", "swedish": "jag ringer"},
+    {"foreign": "du rufst an", "swedish": "du ringer"},
+    {"foreign": "er ruft an", "swedish": "han ringer"},
+
+    {"foreign": "fliegen", "swedish": "flyga"},
+    {"foreign": "ich fliege", "swedish": "jag flyger"},
+    {"foreign": "du fliegst", "swedish": "du flyger"},
+    {"foreign": "er fliegt", "swedish": "han flyger"},
+
+    {"foreign": "schwimmen", "swedish": "simma"},
+    {"foreign": "ich schwimme", "swedish": "jag simmar"},
+    {"foreign": "du schwimmst", "swedish": "du simmar"},
+    {"foreign": "er schwimmt", "swedish": "han simmar"},
+
+    {"foreign": "sitzen", "swedish": "sitta"},
+    {"foreign": "ich sitze", "swedish": "jag sitter"},
+    {"foreign": "du sitzt", "swedish": "du sitter"},
+    {"foreign": "er sitzt", "swedish": "han sitter"},
+
+    {"foreign": "ansehen", "swedish": "titta på"},
+    {"foreign": "ich sehe an", "swedish": "jag tittar på"},
+    {"foreign": "du siehst an", "swedish": "du tittar på"},
+    {"foreign": "er sieht an", "swedish": "han tittar på"},
+
+    {"foreign": "scheinen", "swedish": "lysa"},
+    {"foreign": "ich scheine", "swedish": "jag lyser"},
+    {"foreign": "du scheinst", "swedish": "du lyser"},
+    {"foreign": "er scheint", "swedish": "han lyser"},
+
+    {"foreign": "benutzen", "swedish": "använda"},
+    {"foreign": "ich benutze", "swedish": "jag använder"},
+    {"foreign": "du benutzt", "swedish": "du använder"},
+    {"foreign": "er benutzt", "swedish": "han använder"},
+
+    {"foreign": "umziehen", "swedish": "flytta"},
+    {"foreign": "ich ziehe um", "swedish": "jag flyttar"},
+    {"foreign": "du ziehst um", "swedish": "du flyttar"},
+    {"foreign": "er zieht um", "swedish": "han flyttar"},
+
+    {"foreign": "aussehen", "swedish": "se ut"},
+    {"foreign": "ich sehe aus", "swedish": "jag ser ut"},
+    {"foreign": "du siehst aus", "swedish": "du ser ut"},
+    {"foreign": "er sieht aus", "swedish": "han ser ut"},
+
+    {"foreign": "gefallen", "swedish": "falla i smaken"},
+    {"foreign": "ich gefalle", "swedish": "jag faller i smaken"},
+    {"foreign": "du gefällst", "swedish": "du faller i smaken"},
+    {"foreign": "er gefällt", "swedish": "han faller i smaken"},
+
+    {"foreign": "liegen", "swedish": "ligga"},
+    {"foreign": "ich liege", "swedish": "jag ligger"},
+    {"foreign": "du liegst", "swedish": "du ligger"},
+    {"foreign": "er liegt", "swedish": "han ligger"},
+
+    {"foreign": "hängen", "swedish": "hänga"},
+    {"foreign": "ich hänge", "swedish": "jag hänger"},
+    {"foreign": "du hängst", "swedish": "du hänger"},
+    {"foreign": "er hängt", "swedish": "han hänger"},
+
+    {"foreign": "ausziehen", "swedish": "ta av sig"},
+    {"foreign": "ich ziehe aus", "swedish": "jag tar av mig"},
+    {"foreign": "du ziehst aus", "swedish": "du tar av dig"},
+    {"foreign": "er zieht aus", "swedish": "han tar av sig"}
 ]
