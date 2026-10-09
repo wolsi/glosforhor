@@ -6,5 +6,9 @@
     {
         "file": "nyhetsord.json",
         "name": "Nyhetsord"
+    },
+    {
+        "file":"vanliga_1.json",
+        "name": "Vanliga ord del 1"
     }
 ]
